@@ -2,12 +2,11 @@
 
 const randomNum=[];
 let i = 0;
-while (i < 5){
+while (randomNum.length < 5){
     let num = Math.floor(Math.random() * (100 - 1) + 1);
     if (randomNum.includes(num) == false){
         randomNum.push(num);
     }
-    i++;
 }
 console.log(randomNum);
 document.getElementById(`random_number`).innerHTML = (randomNum);
@@ -16,3 +15,22 @@ setTimeout(timer, 3000);
 function timer(){
     document.getElementById(`random_number`).classList.add(`none`);
 }
+
+const userChoice = [];
+let caughtNum = 0;
+setTimeout(secondTimer, 3005);
+function secondTimer(){
+    for (i=0; i<5; i++){
+    let userChoiceNum = prompt(`Inserisci i numeri che hai visto uno per volta`);
+    if (randomNum.includes(userChoiceNum)){
+        userChoice.push(userChoiceNum);
+        caughtNum = caughtNum + 1;
+        }
+    }
+    console.log(userChoice);
+    console.log(caughtNum);
+}
+
+
+
+
