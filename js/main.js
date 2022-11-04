@@ -11,3 +11,8 @@ while (i < 5){
 }
 console.log(randomNum);
 document.getElementById(`random_number`).innerHTML = (randomNum);
+
+setTimeout(timer, 3000);
+function timer(){
+    document.getElementById(`random_number`).classList.add(`none`);
+}
