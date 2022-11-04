@@ -21,14 +21,14 @@ let caughtNum = 0;
 setTimeout(secondTimer, 3005);
 function secondTimer(){
     for (i=0; i<5; i++){
-    let userChoiceNum = prompt(`Inserisci i numeri che hai visto uno per volta`);
+    let userChoiceNum = Number(prompt(`Inserisci i numeri che hai visto uno per volta`));
     if (randomNum.includes(userChoiceNum)){
         userChoice.push(userChoiceNum);
         caughtNum = caughtNum + 1;
-        }
+        }    
     }
     console.log(userChoice);
-    console.log(caughtNum);
+    console.log(caughtNum); 
 }
 
 
