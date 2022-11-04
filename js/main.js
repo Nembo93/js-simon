@@ -18,7 +18,7 @@ function timer(){
 
 const userChoice = [];
 let caughtNum = 0;
-setTimeout(secondTimer, 3005);
+setTimeout(secondTimer, 3010);
 function secondTimer(){
     for (i=0; i<5; i++){
     let userChoiceNum = Number(prompt(`Inserisci i numeri che hai visto uno per volta`));
@@ -27,8 +27,10 @@ function secondTimer(){
         caughtNum = caughtNum + 1;
         }    
     }
-    console.log(userChoice);
-    console.log(caughtNum); 
+    // console.log(userChoice);
+    // console.log(caughtNum); 
+    console.log((`hai indovinato questi numeri `)+(userChoice));
+    console.log((`hai indovinato `)+(caughtNum)+(` numeri`)); 
 }
 
 
